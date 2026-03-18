@@ -175,6 +175,11 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
 .btn-teal:hover{background:#00c0e8;transform:translateY(-2px)}
 .btn-white-ghost{border:1.5px solid rgba(255,255,255,.2);color:#fff;padding:13px 26px;border-radius:8px;font-size:13.5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color .25s,background .25s}
 .btn-white-ghost:hover{border-color:rgba(0,168,204,.5);background:rgba(0,168,204,.08)}
+
+.fcard-prereq { background: rgba(0,168,204,0.04); border: 1px solid var(--border-dim); border-radius: 8px; padding: 12px 14px; margin-bottom: 18px; }
+.fcard-prereq-label { font-size: 11px; color: var(--teal-dark); letter-spacing: .08em; text-transform: uppercase; font-weight: 500; margin-bottom: 4px; }
+.fcard-prereq-text { font-size: 12.5px; color: var(--ink-60); line-height: 1.5; }
+.fcard-price-highlight { font-family: var(--FD); font-size: 20px; font-weight: 400; color: var(--blue); }
 </style>
 </head>
 <body>
@@ -255,7 +260,7 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
       <button class="filter-btn">Management & Soft Skills</button>
       <button class="filter-btn">Publicité & Communication</button>
       <button class="filter-btn">Vente & Négociation</button>
-      <button class="filter-btn">Intelligence Artificielle</button>
+      <button class="filter-btn on-ia">Intelligence Artificielle</button>
     </div>
 
     <!-- MANAGEMENT & SOFT SKILLS -->
@@ -452,6 +457,78 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
     </div>
   </div>
 </div>
+      </div>
+    </div>
+
+    
+    <div class="cat-sep"></div>
+
+    <!-- INTELLIGENCE ARTIFICIELLE -->
+    <div id="ia">
+      <div class="reveal">
+        <div class="sec-label">Catégorie</div>
+        <div class="cat-title">Intelligence <em>Artificielle</em></div>
+        <div class="cat-desc">Prenez une longueur d'avance. Ces formations vous donnent les clés pour intégrer l'IA générative dans vos pratiques professionnelles — création de contenu, productivité, créativité augmentée.</div>
+      </div>
+      <div class="grid-2 stagger">
+
+        <div class="fcard reveal">
+          <div class="fcard-top">
+            <div class="fcard-top-line"></div>
+            <div class="fcard-badge"><div class="fcard-badge-dot"></div> Intelligence Artificielle</div>
+            <div class="fcard-title">Créer des contenus avec l'intelligence artificielle</div>
+            <div class="fcard-meta">
+              <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+              <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Tous publics</div>
+            </div>
+          </div>
+          <div class="fcard-body">
+            <div class="fcard-desc">Maîtrisez l'utilisation de l'intelligence artificielle générative afin de créer des contenus textuels et visuels de manière optimisée. Repartez avec votre agent GPT personnalisé, prêt à l'emploi.</div>
+            <ul class="fcard-points">
+              <li>Comprendre les fondamentaux de l'IA générative et ses usages en création de contenu</li>
+              <li>Rédiger des prompts efficaces pour textes, images et visuels</li>
+              <li>Produire des contenus textuels optimisés (articles, posts, emails, scripts)</li>
+              <li>Générer et retoucher des visuels avec les outils IA du moment</li>
+              <li>Construire et déployer votre propre agent GPT personnalisé</li>
+            </ul>
+            <div class="fcard-prereq">
+              <div class="fcard-prereq-label">Prérequis & Public</div>
+              <div class="fcard-prereq-text">Tous publics intéressés par l'utilisation de l'IA dans la création de contenu. Aucun prérequis technique.</div>
+            </div>
+            <div class="fcard-footer">
+              <span class="fcard-price-highlight">2 190 € HT</span>
+              <a class="fcard-link" href="contact.html">S'inscrire →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fcard reveal">
+          <div class="fcard-top">
+            <div class="fcard-top-line"></div>
+            <div class="fcard-badge"><div class="fcard-badge-dot"></div> Intelligence Artificielle</div>
+            <div class="fcard-title">L'intelligence artificielle pour les créatifs</div>
+            <div class="fcard-meta">
+              <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>3 jours / 21h</div>
+              <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Créatifs & communicants</div>
+            </div>
+          </div>
+          <div class="fcard-body">
+            <div class="fcard-desc">Libérez votre créativité et produisez des contenus innovants et impactants grâce à l'intelligence artificielle. Un programme intensif de 3 jours pour repousser les limites de ce que vous pouvez créer.</div>
+            <ul class="fcard-points">
+              <li>Explorer l'IA comme outil d'idéation et de brainstorming créatif</li>
+              <li>Générer des univers visuels cohérents et originaux avec l'IA</li>
+              <li>Produire des contenus multiformat : texte, image, vidéo, son</li>
+              <li>Direction artistique et cohérence de marque à l'ère de l'IA</li>
+              <li>Ateliers pratiques sur vos propres projets créatifs</li>
+              <li>Intégrer l'IA dans son workflow créatif de manière durable</li>
+            </ul>
+            <div class="fcard-footer">
+              <span class="fcard-price">Sur devis</span>
+              <a class="fcard-link" href="contact.html">Demander un devis →</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

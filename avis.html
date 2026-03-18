@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | COM CLOSER</title>
+<title>Avis clients | COM CLOSER</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -128,35 +128,23 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
 }
 @media(max-width:600px){.ft-top{grid-template-columns:1fr}}
 
-.contact-layout{display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:start}
-.contact-form-card{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:16px;padding:40px;box-shadow:var(--sh-md)}
-.contact-form-card h3{font-family:var(--FD);font-size:26px;font-weight:300;color:var(--ink);margin-bottom:6px}
-.contact-form-card p{font-size:13.5px;color:var(--ink-60);margin-bottom:28px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-.form-group label{font-size:12.5px;font-weight:500;color:var(--ink-60);letter-spacing:.03em}
-.form-group input,.form-group select,.form-group textarea{background:var(--bg);border:1.5px solid var(--ink-15);border-radius:8px;padding:11px 14px;color:var(--ink);font-size:14px;font-family:var(--FB);outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(0,168,204,.5);box-shadow:0 0 0 3px rgba(0,168,204,.08)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%230d1f33' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.form-submit{width:100%;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:14px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--FB);transition:background .2s,transform .15s,box-shadow .2s;margin-top:8px}
-.form-submit:hover{background:var(--blue-mid);transform:translateY(-1px);box-shadow:0 8px 24px rgba(26,95,168,.3)}
-.contact-info-stack{display:flex;flex-direction:column;gap:16px}
-.contact-info-card{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:14px;padding:22px 24px;display:flex;align-items:center;gap:16px;box-shadow:var(--sh);transition:border-color .2s,transform .2s}
-.contact-info-card:hover{border-color:rgba(0,168,204,.3);transform:translateX(4px)}
-.contact-info-icon{width:44px;height:44px;border-radius:11px;background:rgba(0,168,204,.08);border:1px solid var(--border-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-info-icon svg{width:20px;height:20px;color:var(--teal)}
-.contact-info-label{font-size:12px;color:var(--ink-35);margin-bottom:3px}
-.contact-info-val{font-size:14px;color:var(--ink);font-weight:500}
-.contact-info-val a{color:var(--ink);text-decoration:none;transition:color .2s}
-.contact-info-val a:hover{color:var(--blue)}
-.contact-callout{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:14px;padding:28px;margin-top:16px;position:relative;overflow:hidden}
-.contact-callout::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--teal))}
-.contact-callout h4{font-family:var(--FD);font-size:19px;font-weight:300;color:#fff;margin-bottom:8px}
-.contact-callout p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:18px}
-.contact-callout a{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-size:13px;font-weight:500;text-decoration:none;transition:letter-spacing .2s}
-.contact-callout a:hover{letter-spacing:.03em}
-@media(max-width:900px){.contact-layout{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+.avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.avis-card{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:14px;padding:28px;box-shadow:var(--sh);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.avis-card::before{content:'"';position:absolute;top:-10px;right:16px;font-family:var(--FD);font-size:100px;font-style:italic;color:rgba(0,168,204,.07);line-height:1}
+.avis-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:rgba(0,168,204,.3)}
+.avis-stars{display:flex;gap:3px;margin-bottom:14px}
+.avis-stars span{color:var(--teal);font-size:14px}
+.avis-text{font-size:13.5px;color:var(--ink-60);line-height:1.7;font-style:italic;margin-bottom:22px}
+.avis-author{display:flex;align-items:center;gap:12px}
+.avis-avatar{width:40px;height:40px;border-radius:50%;background:rgba(0,168,204,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--teal-dark);flex-shrink:0}
+.avis-name{font-size:13px;font-weight:500;color:var(--ink)}
+.avis-co{font-size:11.5px;color:var(--ink-35);margin-top:2px}
+.avis-tag{display:inline-block;margin-top:14px;padding:3px 10px;border-radius:50px;background:rgba(0,168,204,.08);border:1px solid var(--border-dim);font-size:11px;color:var(--teal-dark)}
+.score-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:60px}
+.score-card{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:12px;padding:24px;text-align:center;box-shadow:var(--sh)}
+.score-num{font-family:var(--FD);font-size:44px;font-weight:300;color:var(--teal);line-height:1;margin-bottom:6px}
+.score-label{font-size:12.5px;color:var(--ink-60)}
+@media(max-width:900px){.avis-grid{grid-template-columns:1fr}.score-row{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -213,62 +201,81 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
   <div class="page-hero-orb page-hero-orb-1"></div>
   <div class="page-hero-orb page-hero-orb-2"></div>
   <div class="page-hero-inner">
-    <div class="page-hero-breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Contact</span></div>
-    <h1 class="reveal">Parlons de votre<br><em>projet</em></h1>
-    <p class="reveal">Que ce soit pour une formation, une mission de conseil ou un programme sur-mesure — dites-nous ce que vous cherchez. Nous vous répondons sous 24h.</p>
+    <div class="page-hero-breadcrumb"><a href="index.html">Accueil</a><span>/</span><a href="apropos.html">À propos</a><span>/</span><span>Avis clients</span></div>
+    <h1 class="reveal">Ce que disent<br><em>nos clients</em></h1>
+    <p class="reveal">Des retours authentiques, collectés après chaque formation ou mission de conseil. Notre meilleure récompense est de voir nos clients progresser.</p>
   </div>
 </div>
 <section style="background:var(--bg)">
   <div class="container">
-    <div class="contact-layout">
-      <div class="contact-form-card reveal-left">
-        <h3>Envoyez-nous un message</h3>
-        <p>Remplissez ce formulaire et un membre de l'équipe reviendra vers vous rapidement.</p>
-        <div class="form-row">
-          <div class="form-group"><label>Prénom *</label><input type="text" placeholder="Jean"></div>
-          <div class="form-group"><label>Nom *</label><input type="text" placeholder="Dupont"></div>
-        </div>
-        <div class="form-group"><label>Email *</label><input type="email" placeholder="jean.dupont@entreprise.fr"></div>
-        <div class="form-group"><label>Entreprise</label><input type="text" placeholder="Nom de votre entreprise"></div>
-        <div class="form-group"><label>Je suis intéressé(e) par</label>
-          <select>
-            <option value="">-- Sélectionnez --</option>
-            <option>Formations courtes (catalogue)</option>
-            <option>Programme intra-entreprise sur-mesure</option>
-            <option>Conseil stratégique</option>
-            <option>Coaching individuel</option>
-            <option>Conférence / Keynote</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Votre message *</label><textarea placeholder="Décrivez votre besoin, le nombre de participants, les dates envisagées..."></textarea></div>
-        <button class="form-submit">Envoyer ma demande →</button>
-      </div>
-      <div class="reveal-right">
-        <div class="contact-info-stack">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
-            <div><div class="contact-info-label">Email</div><div class="contact-info-val"><a href="mailto:contact@com-closer.fr">contact@com-closer.fr</a></div></div>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-            <div><div class="contact-info-label">Téléphone</div><div class="contact-info-val"><a href="tel:+33600000000">+33 6 XX XX XX XX</a></div></div>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="contact-info-label">Adresse</div><div class="contact-info-val">Marseille, France<br><span style="font-size:12px;color:var(--ink-35);font-weight:400">Interventions nationales</span></div></div>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg></div>
-            <div><div class="contact-info-label">Délai de réponse</div><div class="contact-info-val">Sous 24h ouvrées</div></div>
-          </div>
-          <div class="contact-callout">
-            <h4>Besoin d'un RDV rapide ?</h4>
-            <p>Réservez directement un créneau de 30 minutes pour discuter de votre projet avec un consultant.</p>
-            <a href="#">Prendre rendez-vous →</a>
-          </div>
-        </div>
-      </div>
+    <div class="score-row stagger">
+      <div class="score-card"><div class="score-num">4.9/5</div><div class="score-label">Note globale</div></div>
+      <div class="score-card"><div class="score-num">8.9/10</div><div class="score-label">Formations courtes</div></div>
+      <div class="score-card"><div class="score-num">9.2/10</div><div class="score-label">Sur-mesure & coaching</div></div>
+      <div class="score-card"><div class="score-num">92%</div><div class="score-label">Recommandent COM CLOSER</div></div>
+    </div>
+    <div class="reveal"><div class="sec-label">Témoignages</div><h2 class="sec-t">Ils ont <em>transformé</em> leur performance</h2></div>
+    <div class="avis-grid">
+      
+<div class="avis-card reveal">
+  <div class="avis-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <p class="avis-text">« Une formation qui change réellement la façon d'aborder un rendez-vous commercial. Les outils sont concrets, applicables dès le lendemain. »</p>
+  <div class="avis-author">
+    <div class="avis-avatar">SL</div>
+    <div><div class="avis-name">Sophie Lemaire</div><div class="avis-co">Directrice Commerciale — Groupe Nexia</div></div>
+  </div>
+  <div class="avis-tag">Vente B2B</div>
+</div>
+      
+<div class="avis-card reveal">
+  <div class="avis-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <p class="avis-text">« L'accompagnement conseil de COM CLOSER nous a permis de restructurer notre approche go-to-market. Résultat : +35% de closing en 6 mois. »</p>
+  <div class="avis-author">
+    <div class="avis-avatar">TM</div>
+    <div><div class="avis-name">Thomas Marchand</div><div class="avis-co">CEO — Alkemia Solutions</div></div>
+  </div>
+  <div class="avis-tag">Conseil stratégique</div>
+</div>
+      
+<div class="avis-card reveal">
+  <div class="avis-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <p class="avis-text">« L'approche est à la fois exigeante et bienveillante. On repart avec un plan d'action clair et une vraie montée en confiance sur la négociation. »</p>
+  <div class="avis-author">
+    <div class="avis-avatar">CR</div>
+    <div><div class="avis-name">Clara Roux</div><div class="avis-co">Business Developer — Scaleway</div></div>
+  </div>
+  <div class="avis-tag">Négociation</div>
+</div>
+      
+<div class="avis-card reveal">
+  <div class="avis-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <p class="avis-text">« Enfin une formation prise de parole qui ne repose pas sur des recettes génériques. L'approche personnalisée fait toute la différence. »</p>
+  <div class="avis-author">
+    <div class="avis-avatar">PD</div>
+    <div><div class="avis-name">Pierre Dumont</div><div class="avis-co">Directeur Régional — Engie</div></div>
+  </div>
+  <div class="avis-tag">Prise de parole</div>
+</div>
+      
+<div class="avis-card reveal">
+  <div class="avis-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <p class="avis-text">« Formation ultra-pratique. En 2 jours, j'ai produit plus de contenu qu'en 3 mois. Les outils IA changent vraiment le rapport au temps. »</p>
+  <div class="avis-author">
+    <div class="avis-avatar">AB</div>
+    <div><div class="avis-name">Amélie Bernard</div><div class="avis-co">CMO — Startupzone</div></div>
+  </div>
+  <div class="avis-tag">Community Management & IA</div>
+</div>
+      
+<div class="avis-card reveal">
+  <div class="avis-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+  <p class="avis-text">« Le programme sur-mesure a parfaitement collé à nos enjeux. Nos commerciaux ont adopté les nouvelles méthodes très rapidement. »</p>
+  <div class="avis-author">
+    <div class="avis-avatar">FG</div>
+    <div><div class="avis-name">François Garnier</div><div class="avis-co">DG — Cabinet Meridiem</div></div>
+  </div>
+  <div class="avis-tag">Sur-mesure intra</div>
+</div>
     </div>
   </div>
 </section>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | COM CLOSER</title>
+<title>Formations courtes | COM CLOSER</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -128,35 +128,53 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
 }
 @media(max-width:600px){.ft-top{grid-template-columns:1fr}}
 
-.contact-layout{display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:start}
-.contact-form-card{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:16px;padding:40px;box-shadow:var(--sh-md)}
-.contact-form-card h3{font-family:var(--FD);font-size:26px;font-weight:300;color:var(--ink);margin-bottom:6px}
-.contact-form-card p{font-size:13.5px;color:var(--ink-60);margin-bottom:28px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-.form-group label{font-size:12.5px;font-weight:500;color:var(--ink-60);letter-spacing:.03em}
-.form-group input,.form-group select,.form-group textarea{background:var(--bg);border:1.5px solid var(--ink-15);border-radius:8px;padding:11px 14px;color:var(--ink);font-size:14px;font-family:var(--FB);outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(0,168,204,.5);box-shadow:0 0 0 3px rgba(0,168,204,.08)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%230d1f33' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.form-submit{width:100%;background:var(--blue);color:#fff;border:none;border-radius:8px;padding:14px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--FB);transition:background .2s,transform .15s,box-shadow .2s;margin-top:8px}
-.form-submit:hover{background:var(--blue-mid);transform:translateY(-1px);box-shadow:0 8px 24px rgba(26,95,168,.3)}
-.contact-info-stack{display:flex;flex-direction:column;gap:16px}
-.contact-info-card{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:14px;padding:22px 24px;display:flex;align-items:center;gap:16px;box-shadow:var(--sh);transition:border-color .2s,transform .2s}
-.contact-info-card:hover{border-color:rgba(0,168,204,.3);transform:translateX(4px)}
-.contact-info-icon{width:44px;height:44px;border-radius:11px;background:rgba(0,168,204,.08);border:1px solid var(--border-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-info-icon svg{width:20px;height:20px;color:var(--teal)}
-.contact-info-label{font-size:12px;color:var(--ink-35);margin-bottom:3px}
-.contact-info-val{font-size:14px;color:var(--ink);font-weight:500}
-.contact-info-val a{color:var(--ink);text-decoration:none;transition:color .2s}
-.contact-info-val a:hover{color:var(--blue)}
-.contact-callout{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:14px;padding:28px;margin-top:16px;position:relative;overflow:hidden}
-.contact-callout::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--teal))}
-.contact-callout h4{font-family:var(--FD);font-size:19px;font-weight:300;color:#fff;margin-bottom:8px}
-.contact-callout p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:18px}
-.contact-callout a{display:inline-flex;align-items:center;gap:6px;color:var(--teal);font-size:13px;font-weight:500;text-decoration:none;transition:letter-spacing .2s}
-.contact-callout a:hover{letter-spacing:.03em}
-@media(max-width:900px){.contact-layout{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.filter-btn{padding:7px 20px;border-radius:50px;border:1.5px solid var(--ink-15);color:var(--ink-60);font-size:13px;cursor:pointer;background:var(--bg-card);font-family:var(--FB);transition:all .22s;box-shadow:var(--sh)}
+.filter-btn:hover{border-color:rgba(0,168,204,.4);color:var(--blue)}
+.filter-btn.on{background:var(--blue);color:#fff;border-color:var(--blue);font-weight:500}
+
+.cat-title{font-family:var(--FD);font-size:clamp(26px,3vw,36px);font-weight:300;color:var(--ink);margin-bottom:6px}
+.cat-title em{font-style:italic;color:var(--blue)}
+.cat-desc{font-size:14px;color:var(--ink-60);margin-bottom:32px;max-width:600px}
+.cat-sep{height:1px;background:var(--ink-15);margin:60px 0 48px}
+
+.fcard{background:var(--bg-card);border:1px solid var(--ink-15);border-radius:16px;overflow:hidden;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s,border-color .3s;display:flex;flex-direction:column}
+.fcard:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);border-color:rgba(0,168,204,.3)}
+.fcard-top{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:28px 24px 24px;position:relative;overflow:hidden}
+.fcard-top::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,168,204,.12) 0%,transparent 70%);pointer-events:none}
+.fcard-top-line{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--teal))}
+.fcard-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,168,204,.12);border:1px solid rgba(0,168,204,.25);border-radius:50px;padding:4px 12px;font-size:11px;color:var(--teal);font-weight:500;margin-bottom:14px}
+.fcard-badge-dot{width:5px;height:5px;background:var(--teal);border-radius:50%}
+.fcard-title{font-family:var(--FD);font-size:20px;font-weight:400;color:#fff;line-height:1.2;margin-bottom:10px}
+.fcard-meta{display:flex;gap:16px;flex-wrap:wrap}
+.fcard-tag{font-size:11.5px;color:rgba(255,255,255,.45);display:flex;align-items:center;gap:5px}
+.fcard-tag svg{width:13px;height:13px;color:var(--teal);flex-shrink:0}
+.fcard-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.fcard-desc{font-size:13.5px;color:var(--ink-60);line-height:1.65;flex:1;margin-bottom:20px}
+.fcard-points{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.fcard-points li{font-size:13px;color:var(--ink-60);display:flex;align-items:flex-start;gap:8px;line-height:1.4}
+.fcard-points li::before{content:'';width:5px;height:5px;background:var(--teal);border-radius:50%;margin-top:6px;flex-shrink:0}
+.fcard-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--ink-15)}
+.fcard-price{font-size:12px;color:var(--ink-35)}
+.fcard-link{background:var(--blue);color:#fff;padding:9px 18px;border-radius:7px;font-size:13px;font-weight:500;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
+.fcard-link:hover{background:var(--blue-mid);transform:translateY(-1px)}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+
+@media(max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.grid-3,.grid-2{grid-template-columns:1fr}}
+
+.cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:16px;padding:48px;text-align:center;position:relative;overflow:hidden;margin-top:60px}
+.cta-band::before{content:'';position:absolute;inset:0;opacity:.03;background-image:linear-gradient(rgba(0,168,204,1) 1px,transparent 1px),linear-gradient(90deg,rgba(0,168,204,1) 1px,transparent 1px);background-size:40px 40px}
+.cta-band h3{font-family:var(--FD);font-size:32px;font-weight:300;color:#fff;margin-bottom:10px;position:relative}
+.cta-band h3 em{font-style:italic;color:var(--teal)}
+.cta-band p{color:rgba(255,255,255,.55);font-size:15px;margin-bottom:28px;position:relative}
+.cta-band-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-teal{background:var(--teal);color:var(--navy);padding:13px 28px;border-radius:8px;font-size:13.5px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background .2s,transform .2s}
+.btn-teal:hover{background:#00c0e8;transform:translateY(-2px)}
+.btn-white-ghost{border:1.5px solid rgba(255,255,255,.2);color:#fff;padding:13px 26px;border-radius:8px;font-size:13.5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color .25s,background .25s}
+.btn-white-ghost:hover{border-color:rgba(0,168,204,.5);background:rgba(0,168,204,.08)}
 </style>
 </head>
 <body>
@@ -213,61 +231,236 @@ footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.05);padding
   <div class="page-hero-orb page-hero-orb-1"></div>
   <div class="page-hero-orb page-hero-orb-2"></div>
   <div class="page-hero-inner">
-    <div class="page-hero-breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Contact</span></div>
-    <h1 class="reveal">Parlons de votre<br><em>projet</em></h1>
-    <p class="reveal">Que ce soit pour une formation, une mission de conseil ou un programme sur-mesure — dites-nous ce que vous cherchez. Nous vous répondons sous 24h.</p>
+    <div class="page-hero-breadcrumb">
+      <a href="index.html">Accueil</a><span>/</span><span>Formations courtes</span>
+    </div>
+    <h1 class="reveal">Formations courtes<br><em>directement opérationnelles</em></h1>
+    <p class="reveal">Des programmes conçus par des experts terrain, renouvelés chaque année, pour répondre aux défis concrets de votre métier.</p>
+    <div class="page-hero-bar reveal">
+      <div class="page-hero-stat"><strong>12+</strong><span>formations au catalogue</span></div>
+      <div class="page-hero-stat"><strong>8.9/10</strong><span>satisfaction 2025</span></div>
+      <div class="page-hero-stat"><strong>1–3 jours</strong><span>formats intensifs</span></div>
+    </div>
   </div>
 </div>
+
 <section style="background:var(--bg)">
   <div class="container">
-    <div class="contact-layout">
-      <div class="contact-form-card reveal-left">
-        <h3>Envoyez-nous un message</h3>
-        <p>Remplissez ce formulaire et un membre de l'équipe reviendra vers vous rapidement.</p>
-        <div class="form-row">
-          <div class="form-group"><label>Prénom *</label><input type="text" placeholder="Jean"></div>
-          <div class="form-group"><label>Nom *</label><input type="text" placeholder="Dupont"></div>
-        </div>
-        <div class="form-group"><label>Email *</label><input type="email" placeholder="jean.dupont@entreprise.fr"></div>
-        <div class="form-group"><label>Entreprise</label><input type="text" placeholder="Nom de votre entreprise"></div>
-        <div class="form-group"><label>Je suis intéressé(e) par</label>
-          <select>
-            <option value="">-- Sélectionnez --</option>
-            <option>Formations courtes (catalogue)</option>
-            <option>Programme intra-entreprise sur-mesure</option>
-            <option>Conseil stratégique</option>
-            <option>Coaching individuel</option>
-            <option>Conférence / Keynote</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Votre message *</label><textarea placeholder="Décrivez votre besoin, le nombre de participants, les dates envisagées..."></textarea></div>
-        <button class="form-submit">Envoyer ma demande →</button>
+    <div class="reveal" style="margin-bottom:12px">
+      <div class="sec-label">Catalogue</div>
+      <h2 class="sec-t">Toutes nos <em>formations</em></h2>
+    </div>
+    <div class="filters reveal">
+      <button class="filter-btn on">Tout</button>
+      <button class="filter-btn">Management & Soft Skills</button>
+      <button class="filter-btn">Publicité & Communication</button>
+      <button class="filter-btn">Vente & Négociation</button>
+      <button class="filter-btn">Intelligence Artificielle</button>
+    </div>
+
+    <!-- MANAGEMENT & SOFT SKILLS -->
+    <div id="management">
+      <div class="reveal">
+        <div class="sec-label">Catégorie</div>
+        <div class="cat-title">Management &amp; <em>Soft Skills</em></div>
+        <div class="cat-desc">Développez vos aptitudes relationnelles, votre leadership et votre impact à l'oral. Des formations centrées sur la personne, pas sur les slides.</div>
       </div>
-      <div class="reveal-right">
-        <div class="contact-info-stack">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
-            <div><div class="contact-info-label">Email</div><div class="contact-info-val"><a href="mailto:contact@com-closer.fr">contact@com-closer.fr</a></div></div>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.9a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-            <div><div class="contact-info-label">Téléphone</div><div class="contact-info-val"><a href="tel:+33600000000">+33 6 XX XX XX XX</a></div></div>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="contact-info-label">Adresse</div><div class="contact-info-val">Marseille, France<br><span style="font-size:12px;color:var(--ink-35);font-weight:400">Interventions nationales</span></div></div>
-          </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg></div>
-            <div><div class="contact-info-label">Délai de réponse</div><div class="contact-info-val">Sous 24h ouvrées</div></div>
-          </div>
-          <div class="contact-callout">
-            <h4>Besoin d'un RDV rapide ?</h4>
-            <p>Réservez directement un créneau de 30 minutes pour discuter de votre projet avec un consultant.</p>
-            <a href="#">Prendre rendez-vous →</a>
-          </div>
-        </div>
+      <div class="grid-2 stagger">
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Soft Skills</div>
+    <div class="fcard-title">Médiating : perfectionner sa communication avec chaque média</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Tous niveaux</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Une formation immersive pour apprendre à maîtriser ses interviews, quel que soit le support (presse, vidéo online, réseau social et web, radio ou TV, live ou différé). Avec des mises en situation filmées et analysées.</div>
+    <ul class="fcard-points"><li>Comprendre les codes de chaque média (TV, radio, presse, digital)</li><li>Techniques de prise de parole sous contrainte et en temps limité</li><li>Mises en situation filmées avec debriefing individualisé</li><li>Gérer le stress de la caméra et du direct</li><li>Construire des messages clés percutants et mémorables</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price">Sur devis</span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Soft Skills</div>
+    <div class="fcard-title">Réussir sa prise de parole en public</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Tous niveaux</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Une formation basée sur une approche personnalisée à partir de ses qualités et de ses points forts. Pour gérer ses émotions en toute circonstance et dédramatiser l'enjeu d'une prise de parole en public.</div>
+    <ul class="fcard-points"><li>Identifier ses points forts naturels à l'oral</li><li>Techniques de gestion du stress et des émotions</li><li>Structurer et mémoriser un discours efficacement</li><li>Travailler sa posture, sa voix, son regard</li><li>Simulations en conditions réelles avec feedback vidéo</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price">Sur devis</span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="cat-sep"></div>
+
+    <!-- PUBLICITE & COMMUNICATION -->
+    <div id="publicite">
+      <div class="reveal">
+        <div class="sec-label">Catégorie</div>
+        <div class="cat-title">Publicité &amp; <em>Communication</em></div>
+        <div class="cat-desc">Maîtrisez les outils de communication modernes, du contenu social aux nouvelles technologies IA pour créer et diffuser des messages impactants.</div>
+      </div>
+      <div class="grid-3 stagger">
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> IA & Création</div>
+    <div class="fcard-title">Formation IA vidéo générative – atelier de réalisation</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Intermédiaire</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Apprenez à créer des vidéos professionnelles de A à Z grâce aux outils d'IA générative les plus avancés. De l'écriture du scénario au montage final, en passant par la direction artistique.</div>
+    <ul class="fcard-points"><li>Écriture de scénario, narration et storyboard assistés par IA</li><li>Génération de visuels et mise en scène avec prompts avancés</li><li>Direction artistique et cohérence visuelle</li><li>Animation vidéo et film avec outils IA (Sora, Runway, etc.)</li><li>Création sonore et habillage musical</li><li>Montage et post-production — atelier personnel sur votre projet</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price">Sur devis</span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Social Media</div>
+    <div class="fcard-title">Concevoir et activer une stratégie social vidéo avec des créateurs de contenu</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>1 jour / 7h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Intermédiaire</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Comprenez l'écosystème des créateurs de contenu et apprenez à collaborer efficacement pour maximiser l'impact de votre stratégie vidéo sur les réseaux sociaux.</div>
+    <ul class="fcard-points"><li>Cartographie de l'écosystème créateurs (nano, micro, macro)</li><li>Définir ses objectifs et ses KPIs social vidéo</li><li>Identifier et sélectionner les bons profils créateurs</li><li>Structurer un brief créateur efficace</li><li>Mesurer la performance et optimiser les campagnes</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price">Sur devis</span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Community Management</div>
+    <div class="fcard-title">Community Management & IA : créer des contenus pour réseaux sociaux</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Débutant – Intermédiaire</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">ChatGPT, Canva, CapCut & Sora : des outils IA et modernes pour créer des contenus — images et vidéos — et les animer efficacement sur les réseaux sociaux.</div>
+    <ul class="fcard-points"><li>Utiliser ChatGPT pour générer des textes, captions et stratégies éditoriales</li><li>Créer des visuels professionnels avec Canva et l'IA intégrée</li><li>Produire des vidéos courtes avec CapCut et Sora</li><li>Planifier et animer une présence sociale cohérente</li><li>Analyser les performances et itérer rapidement</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price">Sur devis</span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="cat-sep"></div>
+
+    <!-- VENTE placeholder -->
+    <div id="vente">
+      <div class="reveal">
+        <div class="sec-label">Catégorie</div>
+        <div class="cat-title">Vente &amp; <em>Négociation</em></div>
+        <div class="cat-desc">Nos formations commerciales couplent techniques éprouvées et mises en situation réelles pour des résultats mesurables dès le retour terrain.</div>
+      </div>
+      <div class="grid-3 stagger">
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Bestseller</div>
+    <div class="fcard-title">Vente B2B & cycle long</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Tout niveau</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Maîtrisez les étapes du cycle de vente complexe, de la qualification jusqu'au closing stratégique.</div>
+    <ul class="fcard-points"><li>Qualification MEDDIC et gestion des parties prenantes</li><li>Techniques de discovery et écoute active</li><li>Construction d'une proposition de valeur différenciante</li><li>Gestion des objections et closing</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price"></span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Négociation</div>
+    <div class="fcard-title">Négociation à enjeux élevés</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>1 jour / 7h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Confirmé</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Défendez votre valeur et concluez dans des contextes de forte pression sans sacrifier la relation.</div>
+    <ul class="fcard-points"><li>Stratégies et tactiques de négociation avancées</li><li>Lire et influencer la dynamique de pouvoir</li><li>Ancrage, concessions et création de valeur</li><li>Simuler et débriefer des négociations réelles</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price"></span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+        
+<div class="fcard reveal">
+  <div class="fcard-top">
+    <div class="fcard-top-line"></div>
+    <div class="fcard-badge"><div class="fcard-badge-dot"></div> Prospection</div>
+    <div class="fcard-title">Prospection & cold outreach</div>
+    <div class="fcard-meta">
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg>2 jours / 14h</div>
+      <div class="fcard-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Débutant – Confirmé</div>
+    </div>
+  </div>
+  <div class="fcard-body">
+    <div class="fcard-desc">Construire un pipeline solide grâce à des techniques de prospection multicanal efficaces et respectueuses.</div>
+    <ul class="fcard-points"><li>Définir son ICP et ses signaux d'achat</li><li>Séquences d'emails froids à fort taux d'ouverture</li><li>LinkedIn Sales Navigator et social selling</li><li>Mesurer et optimiser son pipeline</li></ul>
+    <div class="fcard-footer">
+      <span class="fcard-price"></span>
+      <a class="fcard-link" href="contact.html">Demander un devis →</a>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="cta-band reveal">
+      <h3>Besoin d'un programme <em>sur-mesure</em> ?</h3>
+      <p>Nous adaptons chaque formation à votre secteur, vos enjeux et votre équipe.</p>
+      <div class="cta-band-btns">
+        <a class="btn-teal" href="contact.html">Demander un programme sur-mesure</a>
+        <a class="btn-white-ghost" href="sur-mesure.html">En savoir plus →</a>
       </div>
     </div>
   </div>
@@ -314,6 +507,13 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(function(el){obs.observe(el);});
 </script>
-
+<script>
+document.querySelectorAll('.filter-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('on');});
+    btn.classList.add('on');
+  });
+});
+</script>
 </body>
 </html>
